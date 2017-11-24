@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="javascript/game.js"></script>
+    <title>Antiyoy Online</title>
+  </head>
+  <body style="w3-light-grey w3-row"  >
+	<header class="w3-container w3-center">
+		<h1>Antiyoy Online</h1>
+	</header>
+	
+	
+	<section id="state-noscript" class="w3-container w3-content w3-display-middle w3-white">
+		<div class="w3-container w3-pale-red w3-leftbar w3-border-red">
+			<p>You need Javascript to run this Game</p>
+		</div>
+	</section>
+	
+	<section id="state-userjoin" class="w3-content w3-half w3-display-middle">
+		<form class="">
+			<label>Playername</label>
+			<input class="w3-input" type="text" pattern="[a-zA-Z0-9 -_#.:,;]*" maxlength="32" title="max 32 Characters">
+			<input id="userjoin-settings-checkbox" class="w3-check" type="checkbox" onclick="userjoin_checkbox_toggled()">
+			<label class="w3-margin-bottom">Play with Friends</label>
+			<br />
+			
+			<div id="userjoin-lobbysettings"class="w3-panel w3-khaki w3-padding w3-section" >
+				<label>LobbyID</label>
+				<input class="w3-input w3-khaki" type="text" pattern="[a-zA-Z0-9 -_#.:,;]*" maxlength="64" title="max 64 Characters">
+				<div class="w3-margin-top">
+					<input class="w3-check" type="checkbox"><label>Use Password</label>	
+				</div>
+				<input class="w3-input w3-khaki w3-margin-bottom" type="password" >		
+			</div>
+			
+			<button class="w3-button w3-bar w3-blue w3-margin-top">Play</button>
+			
+		</form>
+	</section>
+	
+	<section id="state-lobby" class="w3-content w3-half w3-display-middle w3-row" >
+		<div class="w3-third w3-panel w3-grey w3-section w3-cell-top">
+			<label class="w3-margin-top">Link to Lobby</label>
+			<input type="text" class="w3-input w3-grey">
+			<hr>
+			<ul class="w3-ul w3-light w3-card-4 w3-margin-bottom w3-white">
+				<li class="w3-bar">
+					<span class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+					<!--<img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">-->
+					<div class="w3-bar-item">Player1</div>
+				</li>
+				<li class="w3-bar">
+					<span class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+					<!--<img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">-->
+					<div class="w3-bar-item">Player2</div>
+				</li>
+			</ul>
+			
+			<button class="w3-bar w3-button w3-teal w3-xlarge w3-margin-bottom">Leave</button>
+		</div>
+		<div class="w3-twothird w3-panel w3-grey w3-section">
+		</div>
+	</section>
+	
+	<footer class="w3-bar w3-container w3-center w3-gray w3-display-bottommiddle">
+		<p><a href="impressum.html">Impressum</a>  |  <a href="about.html">About</a>  |  Powered by W3.CSS</p>	
+	</footer>
+  </body>
+</html>
