@@ -4,6 +4,9 @@
 #userjoin-lobbysettings {
 	display: none;
 }
+#userjoin-alert {
+	display: none;
+}
 #state-lobby {
 	display: none;
 }

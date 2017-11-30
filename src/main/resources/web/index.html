@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/w3.css">"
-	<link rel="stylesheet" href="css/bootstrap.min.css">"
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="javascript/game.js"></script>
     <title>Antiyoy Online</title>
@@ -24,29 +24,38 @@
 	</section>
 	
 	<section id="state-userjoin" class="container">
-		<form class="">
-			<div class="input-group mt-5">
-				<span class="input-group-addon">Playername</span>
-				<input type="text" class="form-control" placeholder="Username" pattern="[a-zA-Z0-9 -_#.:,;]*" maxlength="32">
-			</div>
-			<input id="userjoin-settings-checkbox" class="w3-check" type="checkbox" onclick="userjoin_checkbox_toggled()">
-			<label class="w3-margin-bottom">Play with Friends</label>
-			<br />
+		
+		<div class="input-group mt-5">
+			<span class="input-group-addon">Playername</span>
+			<input id="userjoin-username" type="text" class="form-control" placeholder="Username" pattern="[a-zA-Z0-9 -_#.:,;]*" maxlength="32">
+		</div>
+		
+		<div class="my-3">
+			<input id="userjoin-settings-checkbox" type="checkbox" onclick="userjoin_checkbox_toggled()">
+			<span>Show Lobby Detail</span>
+		</div>
+		
+		<div id="userjoin-lobbysettings"class="container bg-info px-3 py-2 my-3" >
 			
-			<div id="userjoin-lobbysettings"class="container bg-info" >
-				<div class="input-group mt-3">
-					<span class="input-group-addon">LobbyID</span>
-					<input type="text" class="form-control" placeholder="UUID" pattern="[a-zA-Z0-9 -_#.:,;]*" maxlength="64">
-				</div>
-				<div class="w3-margin-top">
-					<input class="w3-check" type="checkbox"><label>Use Password</label>	
-				</div>
-				<input class="w3-input w3-khaki w3-margin-bottom" type="password" >		
+			<div class="input-group mt-3">
+				<span class="input-group-addon">LobbyID</span>
+				<input id="userjoin-lobbyid" type="text" class="form-control" placeholder="UUID" pattern="[a-zA-Z0-9 -_#.:,;]*" maxlength="64">
 			</div>
 			
-			<button class="w3-button w3-bar w3-blue w3-margin-top">Play</button>
+			<div class="input-group mt-3">
+				<span class="input-group-addon">Use Password</span>
+				<span class="input-group-addon"><input id="userjoin-password-need" type="checkbox" ></span>	
+				<input id="userjoin-password" class="form-control" type="password" placeholder="Password">
+			</div>
 			
-		</form>
+		</div>
+		
+		<div id="userjoin-alert" class="alert alert-warning" role="alert" >
+			undef
+		</div>
+		
+		<button type="button" class="btn btn-primary btn-block btn-lg">Play</button>
+	
 	</section>
 	
 	<section id="state-lobby" class="w3-content w3-half w3-display-middle w3-row" >
