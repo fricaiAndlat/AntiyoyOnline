@@ -15,9 +15,13 @@ public class Main {
 
 
         AntiyoyOnline antiyoy = new AntiyoyOnline();
-        Websocket websocket = new Websocket(antiyoy, 81);
+        Websocket websocket = new Websocket(antiyoy, 9985);
 
-        WebSocketClient client1 = new WebSocketClient(new URI("ws://localhost:81/")) {
+
+
+        Thread.sleep(1000);
+
+        WebSocketClient client1 = new WebSocketClient(new URI("ws://localhost:9985/")) {
             @Override
             public void onOpen(ServerHandshake handshakedata) {}
 
@@ -36,7 +40,7 @@ public class Main {
             }
         };
 
-        WebSocketClient client2 = new WebSocketClient(new URI("ws://localhost:81/")) {
+        WebSocketClient client2 = new WebSocketClient(new URI("ws://localhost:9985/")) {
             @Override
             public void onOpen(ServerHandshake handshakedata) {}
 

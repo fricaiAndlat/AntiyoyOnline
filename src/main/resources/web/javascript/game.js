@@ -1,3 +1,8 @@
+function init() {
+	document.getElementById("state-noscript").style.display = "none";
+	document.getElementById("state-userjoin").style.display = "block";
+}
+
 function userjoin_checkbox_toggled() {
 
 	if (document.getElementById("userjoin-settings-checkbox").checked) {
